@@ -1,0 +1,8 @@
+sudo apt install john  # Install password cracker
+
+echo "user1:5f4dcc3b5aa765d61d8327deb882cf99" > test_passwords.txt  # MD5 hash of "password"
+
+john --format=raw-md5 test_passwords.txt  # Specify hash format
+
+
+john --show test_passwords.txt  # Display cracked passwords
